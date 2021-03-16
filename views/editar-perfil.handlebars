@@ -1,0 +1,92 @@
+<main class="container">
+    <div class="py-5 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor"
+            class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" />
+        </svg>
+        <h2>Editar Perfil</h2>
+        <p class="lead">
+        </p>
+    </div>
+    {{#if mensajes}}
+    <div class="alertas">
+        {{#mostrarAlertas mensajes}}
+        {{/mostrarAlertas }}
+    </div>
+    {{/if}}
+    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm"
+        style="background-color: #6f42c1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="38" fill="currentColor" class="bi bi-journal-text"
+            viewBox="0 0 16 16">
+            <path
+                d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+            <path
+                d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+            <path
+                d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+        </svg>
+        <div class="lh-1">
+            <h1 class="h4 mb-0 text-white lh-1">Actualizar Datos.</h1>
+            {{!-- <small>Since 2011</small> --}}
+        </div>
+    </div>
+
+    <div class="my-4 p-4 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">Llenar todos los campos</h4>
+        <form class="row g-3" action="/editar-perfil" method="POST" enctype="multipart/form-data">
+            <div class="col-md-6">
+                <label class="form-label"><strong>Nombre:</strong></label>
+                <input value="{{usuario.nombre}}" type="text" class="form-control" name="nombre">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><strong>Email:</strong></label>
+                <input value="{{usuario.email}}" type="email" class="form-control" name="email">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label"><strong>Empresa:</strong></label>
+                <input value="{{usuario.empresa}}" type="text" class="form-control" name="empresa">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label"><strong>Direccion de la Empresa</strong></label>
+                <input value="{{usuario.direccion}}" type="text" class="form-control" name="direccion">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><strong>Graduado en:</strong></label>
+                <input value="{{usuario.graduado}}" type="text" class="form-control" name="graduado">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><strong>Contraseña:</strong></label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><strong>Subir imagen de perfil</strong></label>
+                <input class="form-control " type="file" name="imagen" id="formFile">
+               {{!--  <div class="col-sm">
+                    <br>
+                    <div class="avatar avatar-xl">
+                        <img src="uploads/perfiles/{{usuario.imagen}}" alt="user" class="avatar-img rounded-circle">
+                    </div>
+                </div> --}}
+
+                {{#if usuario.imagen}}
+                <div class="avatar avatar-xl">
+                        <img src="uploads/perfiles/{{usuario.imagen}}" alt="user" class="avatar-img rounded-circle">
+                    </div>
+                {{else}}
+                <div class="avatar avatar-xl" style="top: 10px;">
+                    <span class="avatar-text avatar-text-indigo rounded-circle"><span
+                            class="initial-wrap"><span>DJ</span></span>
+                    </span>
+                </div>
+                {{/if}}
+                
+            </div>
+            <div class="col-12" style="margin-top: 0px;top: 15px;">
+                <input type="submit" class="btn btn-success" value="Guardar Cambios">
+            </div>
+        </form>
+    </div>
+</main>
+
+{{>footer}}

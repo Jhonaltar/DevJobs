@@ -1,0 +1,165 @@
+<main class="container">
+    <div class="py-5 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor" class="bi bi-briefcase-fill"
+            viewBox="0 0 16 16">
+            <path
+                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+            <path
+                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+        </svg>
+        <h2>Vacante</h2>
+        <p class="lead">Aqui podras poner los datos para registrar la vacante y se visualizara en lista de vancatantes.
+        </p>
+    </div>
+    {{#if mensajes}}
+    <div class="alertas">
+        {{#mostrarAlertas mensajes}}
+        {{/mostrarAlertas }}
+    </div>
+    {{/if}}
+    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm"
+        style="background-color: #6f42c1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="38" fill="currentColor" class="bi bi-clipboard-check"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+            <path
+                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
+            <path
+                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
+        </svg>
+        <div class="lh-1">
+            <h1 class="h4 mb-0 text-white lh-1">Detalle de la vacante.</h1>
+            {{!-- <small>Since 2011</small> --}}
+        </div>
+    </div>
+
+    <div class="my-4 p-4 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">{{vacante.titulo}}</h4>
+        <br>
+        <div class="page-content bg-white">
+            <div class="content-block">
+                <!-- Job Detail -->
+                <div class="section-full content-inner-1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="sticky-top">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-6">
+                                            <div class="m-b30">
+                                                <img src="https://placeimg.com/290/230/tech" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-6">
+                                            <div class="widget bg-white p-lr20 p-t20  widget_getintuch radius-sm">
+                                                <br>
+                                                <h4 class="text-black font-weight-700 p-t10 m-b15">Datos</h4>
+                                                <ul>
+                                                    <li><i class="ti-location-pin"></i><strong
+                                                            class="font-weight-700 text-black">Direccion:</strong><span
+                                                            class="text-black-light"> {{vacante.ubicacion}} </span></li>
+                                                    <li><i class="ti-money"></i><strong
+                                                            class="font-weight-700 text-black">Salario: </strong>
+                                                        ${{vacante.salario}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-6">
+                                            <h4 class="border-bottom pb-2 mb-0"></h4>
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-12 col-md-6 ">
+                                            <div class="widget bg-white p-lr20 p-t20  widget_getintuch radius-sm">
+                                                <h4 class="text-black font-weight-700 p-t10 m-b15 ">Informacion del
+                                                    Reclutador</h4>
+                                                {{#if vacante.autor.nombre}}
+                                                <div class="d-flex flex-column align-items-center text-center">
+
+                                                    {{!-- <img src="/uploads/perfiles/{{vacante.autor.imagen}}" alt="Admin"
+                                                        class="rounded-circle" width="150"> --}}
+
+                                                    {{#if vacante.autor.imagen}}
+                                                    <img src="/uploads/perfiles/{{vacante.autor.imagen}}" alt="Admin"
+                                                        class="rounded-circle" width="150">
+                                                    {{else}}
+                                                    {{/if}}
+
+                                                    <div class="mt-3">
+                                                        <h6>{{vacante.autor.nombre}}</h6>
+                                                        <p class="text-secondary mb-1"><strong>Empresa: </strong>
+                                                            {{vacante.autor.empresa}}</p>
+                                                        <p class="text-secondary mb-1"><strong>Direccion:</strong>
+                                                            {{vacante.autor.direccion}}</p>
+                                                        <p class="text-secondary mb-1"><strong>Graduado en: </strong>
+                                                            <span
+                                                                class="btn btn-info p-0px-tb p-10px-lr font-small border-radius-15">
+                                                                {{vacante.autor.graduado}}
+                                                            </span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="job-info-box">
+                                    <h3 class="m-t0 m-b10 font-weight-700 title-head">
+                                        <a class="text-secondry m-r30">{{vacante.empresa}}</a> <span
+                                            class="btn btn-success p-0px-tb p-10px-lr font-small border-radius-15">{{vacante.contrato}}</span>
+                                    </h3>
+                                    <h5 class="font-weight-600">Descripcion: </h5>
+                                    <div class="dez-divider divider-2px bg-gray-dark mb-4 mt-0">
+                                        <p>{{{vacante.descripcion}}}</p>
+                                    </div>
+                                    <h5 class="font-weight-600">Lista de Conociminto:</h5>
+                                    <ul class="list-num-count no-round" style="padding-left: 0px;">
+                                        {{#each vacante.skills}}
+                                        <span
+                                            class="btn btn-primary p-0px-tb p-10px-lr font-small border-radius-15">{{this}}</span>
+                                        {{/each }}
+                                    </ul>
+                                </div>
+                                <br>
+                                <h4 class="border-bottom pb-2 mb-0"></h4>
+                                <br>
+                                <h4 class="text-black font-weight-700 p-t10 m-b15 ">Contactar Reclutador</h4>
+                                <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                    <strong>Llena el siguiente formulario, sube tu curriculum y pronto te
+                                        contactaremos!</strong>
+                                </div>
+                                <form class="row g-3" action="/vacantes/{{vacante.url}}" method="POST"
+                                    enctype="multipart/form-data">
+                                    <div class="col-md-6">
+                                        <label class="form-label"><strong>Nombre:</strong></label>
+                                        <input type="text" class="form-control" name="nombre"
+                                            placeholder="Escribir Nombres Completos">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label"><strong>Email:</strong></label>
+                                        <input type="email" class="form-control" name="email"
+                                            placeholder="Escribir un email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label"><strong>CV (PDF):</strong></label>
+                                        <input type="file" class="form-control" name="cv">
+                                    </div>
+                                    <div class="col-12" style="margin-top: 0px;top: 8px;">
+                                        <input type="submit" class="btn btn-primary" value="Enviar">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Job Detail -->
+                <!-- Our Jobs END -->
+            </div>
+        </div>
+    </div>
+</main>
+
+{{>footer}}

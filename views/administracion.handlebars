@@ -1,0 +1,210 @@
+<main class="container">
+    <div class="py-5 text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="57" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg>
+        <h2>{{nombrePagina}}</h2>
+        <p class="lead">{{tagline}}.
+        </p>
+    </div>
+    {{#if mensajes}}
+    <div class="alertas">
+        {{#mostrarAlertas mensajes}}
+        {{/mostrarAlertas }}
+    </div>
+    {{/if}}
+    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm"
+        style="background-color: #6f42c1;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="38" fill="currentColor"
+            class="bi bi-menu-button-wide" viewBox="0 0 16 16">
+            <path
+                d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v2A1.5 1.5 0 0 1 14.5 5h-13A1.5 1.5 0 0 1 0 3.5v-2zM1.5 1a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-13z" />
+            <path
+                d="M2 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm10.823.323l-.396-.396A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <div class="lh-1">
+            <h1 class="h4 mb-0 text-white lh-1">Navegacion</h1>
+        </div>
+    </div>
+    <div class="my-4 p-4 bg-body rounded shadow-sm">
+        <a href="/editar-perfil" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+                </path>
+                <path fill-rule="evenodd"
+                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+                </path>
+            </svg> Editar Perfil</a>
+        <a href="/vacantes/nueva" class="btn btn-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-receipt-cutoff" viewBox="0 0 16 16">
+                <path
+                    d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z" />
+                <path
+                    d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198l.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z" />
+            </svg> Nueva Vacante</a>
+    </div>
+
+    <div class="my-4 p-4 bg-body rounded shadow-sm">
+        <h4 class="border-bottom pb-2 mb-0">Tus Vacantes</h4>
+        <br>
+        {{#if vacantes.length}}
+        <div class="panel-administracion">
+            <div class="container-fluid">
+                <div class="row">
+                    {{#each vacantes}}
+                    <div class="col-md-3 col-sm-4 ">
+                        <div class="wrimagecard wrimagecard-topimage">
+                            <a href="/vacantes/{{url}}">
+                                <div class="wrimagecard-topimage_header"
+                                    style="background-color: rgba(22, 160, 133, 0.1)">
+                                    <center><i class="fa fa-cubes" style="color:#16A085"></i></center>
+                                </div>
+                                <div class="wrimagecard-topimage_title">
+                                    <h5 class="card-title"> <a href="/vacantes/{{url}}">{{titulo}}</a></h5>
+                                    <div class="wrimagecard-topimage_title">
+                                        <div class="btn-group btn-group-sm" style="right: 33px;" role="group" aria-label="...">
+                                            <a href="/candidatos/{{_id}}" class="btn btn-primary"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-receipt-cutoff"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zM11.5 4a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z" />
+                                                        <path
+                                                            d="M2.354.646a.5.5 0 0 0-.801.13l-.5 1A.5.5 0 0 0 1 2v13H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H15V2a.5.5 0 0 0-.053-.224l-.5-1a.5.5 0 0 0-.8-.13L13 1.293l-.646-.647a.5.5 0 0 0-.708 0L11 1.293l-.646-.647a.5.5 0 0 0-.708 0L9 1.293 8.354.646a.5.5 0 0 0-.708 0L7 1.293 6.354.646a.5.5 0 0 0-.708 0L5 1.293 4.354.646a.5.5 0 0 0-.708 0L3 1.293 2.354.646zm-.217 1.198l.51.51a.5.5 0 0 0 .707 0L4 1.707l.646.647a.5.5 0 0 0 .708 0L6 1.707l.646.647a.5.5 0 0 0 .708 0L8 1.707l.646.647a.5.5 0 0 0 .708 0L10 1.707l.646.647a.5.5 0 0 0 .708 0L12 1.707l.646.647a.5.5 0 0 0 .708 0l.509-.51.137.274V15H2V2.118l.137-.274z" />
+                                                    </svg> Candidatos</a>
+                                            <a href="/vacantes/editar/{{url}}"class="btn btn-secondary"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-pencil-square"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                                                    </svg> Editar</a>
+                                            <a data-eliminar={{_id}} class="btn btn-danger"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                        <path fill-rule="evenodd"
+                                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                                    </svg> Eliminar</a>
+                                        </div>
+                                </div>
+                                    <span class="btn btn-warning p-0px-tb p-10px-lr font-small border-radius-15">
+                                        <strong>Numero de candidatos:</strong> <span class="badge bg-light ">
+                                            {{candidatos.length}}</span>
+
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        {{else}}
+
+        <div class="alert alert-info" role="alert">
+            <h6 class="border-bottom pb-2 mb-0"><strong>No hay vacantes, crea una!</strong></h6>
+        </div>
+        {{/if}}
+
+        {{!-- SI VALE <div class="panel-administracion">
+            {{#if vacantes.length}}
+            {{#each vacantes}}
+            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex">
+                        DJ
+                    </div>
+                    <div class="job-content">
+                        <h5 class="text-center text-md-left">{{titulo}}</h5>
+                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                            <li class="mr-md-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                </svg> {{ubicacion}}
+                            </li>
+                            <li class="mr-md-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cash-stack" viewBox="0 0 16 16">
+                                    <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1H1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                                    <path
+                                        d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V5zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2H3z" />
+                                </svg> {{salario}}
+                            </li>
+                            <li class="mr-md-4">
+                                <span class="btn btn-primary p-0px-tb p-10px-lr font-small border-radius-15 color"
+                                    id="color" value="">{{contrato}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job-right my-4 flex-shrink-0">
+                    <a data-eliminar={{_id}} class="btn d-block w-100 d-sm-inline-block btn-light">Eliminar</a>
+                </div>
+            </div>
+            {{/each}}
+            {{else}}
+            <div class="alert alert-info" role="alert">
+                <h6 class="border-bottom pb-2 mb-0"><strong>No hay vacantes, crea una!</strong></h6>
+            </div>
+            {{/if}}
+        </div> --}}
+
+        {{!-- <div class="panel-administracion">
+            {{#if vacantes.length}}
+            <div class="container-fluid">
+                <div class="row">
+                    {{#each vacantes}}
+                    <div class="col-md-3 col-sm-4 ">
+                        <div class="wrimagecard wrimagecard-topimage">
+                            <a href="/vacantes/{{url}}">
+                                <div class="wrimagecard-topimage_header"
+                                    style="background-color: rgba(22, 160, 133, 0.1)">
+                                    <center><i class="fa fa-cubes" style="color:#16A085"></i></center>
+                                </div>
+                                <div class="caja">
+                                    <h3>{{empresa}}</h3>
+                                    <p class="puesto">{{titulo}}</p>
+                                    <p class="candidatos">
+                                        {{candidatos.length}} Candidato(s)
+                                    </p>
+
+                                </div>
+                                <div class="wrimagecard-topimage_title">
+                                    <h5 class="card-title">{{titulo}}</h5>
+                                    <div class="centrar-vertical caja">
+                                        <a href="/candidatos/{{_id}}" class="btn btn-amarillo">Candidatos</a>
+                                    </div>
+                                    <div class="centrar-vertical caja">
+                                        <a href="/vacantes/editar/{{url}}" class="btn btn-verde">Editar</a>
+                                    </div>
+                                    <div class="centrar-vertical caja">
+                                        <a href="#" data-eliminar={{_id}} class="btn btn-rojo">Eliminar</a>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{else}}
+            <p>No Hay vacantes, crea una</p>
+            {{/if}}
+        </div> --}}
+
+    </div>
+</main>
+
+{{>footer}}

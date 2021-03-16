@@ -1,0 +1,70 @@
+<br>
+<br>
+<div class="container">
+    {{#if mensajes}}
+    <div class="alertas mx-auto">
+        {{#mostrarAlertas mensajes}}
+        {{/mostrarAlertas }}
+    </div>
+    {{/if}}
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto fadeInDown">
+            <div class="card card-signin flex-row my-5">
+
+                <div class="col-md-6 d-none d-md-flex bg-image"></div>
+
+
+                <!-- The content half -->
+                <div class="col-md-6 bg-light">
+                    <div class="login d-flex align-items-center py-5">
+
+                        <!-- Demo content-->
+                        <div class="container">
+
+                            <div class="col-lg-10 col-xl-12 mx-auto">
+                                <h5 class="display-4">Crear tu cuenta!</h5>
+                                <p class="text-muted mb-4">{{tagline}}</p>
+                                <form action="/crear-cuenta" method="POST">
+                                    <div class="form-group mb-3">
+                                        <input id="inputEmail" type="text" placeholder="Nombre Completos" name="nombre"
+                                            autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputEmail" type="email" placeholder="Escribir un correo"
+                                            name="email" autofocus=""
+                                            class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputPassword" type="password" placeholder="Escribir una contraseña"
+                                            name="password"
+                                            class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputPassword" type="password" placeholder="Confirmar contraseña"
+                                            name="confirmar"
+                                            class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    </div>
+                                    {{!-- <div class="custom-control custom-checkbox mb-3">
+                                        <input id="customCheck1" type="checkbox" checked class="custom-control-input">
+                                        <label for="customCheck1" class="custom-control-label">Remember password</label>
+                                    </div> --}}
+                                    <button type="submit"
+                                        class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Registrar
+                                        Cuenta</button>
+                                    <div class="text-center d-flex justify-content-between mt-4">
+                                        <a href="/iniciar-sesion" class="font-italic text-muted">
+                                            <u>Volver a inicar sesion</u></a></p>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div><!-- End -->
+
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div>
+
+    </div>
+</div>

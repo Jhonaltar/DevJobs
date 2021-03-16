@@ -1,0 +1,58 @@
+<br>
+<br>
+<div class="container">
+     {{#if mensajes}}
+
+    <div class="alertas">
+        {{#mostrarAlertas mensajes}}
+        {{/mostrarAlertas }}
+    </div>
+    {{/if}}
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto fadeInDown">
+            <div class="card card-signin flex-row my-5">
+                <div class="col-md-6 d-none d-md-flex bg-image"></div>
+                <!-- The content half -->
+                <div class="col-md-6 bg-light">
+                    <div class="login d-flex align-items-center py-5">
+
+                        <!-- Demo content-->
+                        <div class="container">
+
+                            <div class="col-lg-10 col-xl-12 mx-auto">
+                                <h5 class="display-4">Iniciar Sesión!</h5>
+                                <p class="text-muted mb-4">{{tagline}}</p>
+                                <form action="/iniciar-sesion" method="POST">
+                                    <div class="form-group mb-3">
+                                        <input id="inputEmail" type="email" placeholder="Escribir un correo"
+                                            name="email" autofocus=""
+                                            class="form-control rounded-pill border-0 shadow-sm px-4" >
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input id="inputPassword" type="password" placeholder="Escribir una contraseña"
+                                            name="password"
+                                            class="form-control rounded-pill border-0 shadow-sm px-4 text-primary"
+                                            >
+                                    </div>
+                                    <button type="submit"
+                                        class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Iniciar
+                                        Sesión</button>
+                                    <div class="text-center d-flex justify-content-between mt-4">
+                                        <a href="/crear-cuenta" class="font-italic text-muted">
+                                            <u>Crear una cuenta</u></a></p>
+                                        <a href="/reestablecer-password" class="font-italic text-muted">
+                                            <u>Olvide mi password</u></a></p>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div><!-- End -->
+
+                    </div>
+                </div><!-- End -->
+
+            </div>
+        </div>
+
+    </div>
+</div>
