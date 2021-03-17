@@ -1,4 +1,2 @@
 node_modules/
-public/uploads/cv/*
-public/uploads/perfiles/*
 variables.env
